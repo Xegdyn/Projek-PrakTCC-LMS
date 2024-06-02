@@ -12,7 +12,7 @@ steps:
         "--image",
         "gcr.io/$PROJECT_ID/buku",
         "--port",
-        "8080",
+        "3100",
         "--region",
         "asia-southeast2",
         "--platform",
