@@ -1,14 +1,14 @@
-// Mengimport package
 const express = require("express");
 const cors = require("cors");
 const app = express();
-const port = 3100; // Sesuaikan port jika diperlukan
+const port = process.env.PORT || 3100; // Use PORT environment variable
+
 const bukuRouter = require("./buku");
 
-// Supaya API dapat diakses di domain yang berbeda
+// Enable CORS
 app.use(cors());
 
-// Buat ngubah request body yang berupa json ke dalam object
+// Parse JSON bodies
 app.use(express.json());
 
 app.use("/buku", bukuRouter);
@@ -17,5 +17,5 @@ app.get("/", (req, res) => {
   res.send("Hello from buku-service! 📚");
 });
 
-// Menjalankan server di port 3200
-app.listen(port, () => console.log("Server terkoneksi pada port " + port));
+// Listen on the port specified by the PORT environment variable
+app.listen(port, () => console.log("Server is running on port " + port));
