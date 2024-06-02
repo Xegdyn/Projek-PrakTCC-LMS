@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buku</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a href="index.html">Kembali</a>
+    <h1>Data Buku</h1>
+    <form>
+      <span>
+        <label for="nama">Nama</label>
+        <input
+          data-id
+          id="nama"
+          type="text"
+          placeholder="Masukkan nama buku"
+          required
+        />
+      </span>
+      <span style="margin-left: 1rem">
+        <label for="kode_buku">Kode Buku</label>
+        <input
+          data-id
+          id="kode_buku"
+          type="text"
+          placeholder="Masukkan kode buku"
+          required
+        />
+      </span>
+      <button type="submit">Simpan</button>
+    </form>
+    <main style="margin-top: 1rem">
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nama</th>
+            <th>Kode Buku</th>
+            <th colspan="2">Option</th>
+          </tr>
+        </thead>
+        <tbody id="table-buku"></tbody>
+      </table>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="buku.js"></script>
+  </body>
+</html>
