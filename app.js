@@ -1,7 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const pengunjungRouter = require("./pengunjung");
-const port = "3100"; // Sesuaikan port jika diperlukan
+const port = "8080"; // Sesuaikan port jika diperlukan
 const app = express();
 
 app.use(cors());
