@@ -1,7 +1,6 @@
 steps:
   - name: "gcr.io/cloud-builders/docker"
     args: ["build", "-t", "gcr.io/$PROJECT_ID/buku", "."]
-    dir: "buku-service"
   - name: "gcr.io/cloud-builders/docker"
     args: ["push", "gcr.io/$PROJECT_ID/buku"]
   - name: "gcr.io/cloud-builders/gcloud"
