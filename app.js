@@ -2,7 +2,7 @@
 const express = require("express");
 const cors = require("cors");
 const app = express();
-const port = 3200; // Sesuaikan port jika diperlukan
+const port = 3100; // Sesuaikan port jika diperlukan
 const bukuRouter = require("./buku");
 
 // Supaya API dapat diakses di domain yang berbeda
