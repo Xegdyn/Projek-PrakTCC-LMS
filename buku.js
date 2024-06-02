@@ -68,7 +68,7 @@ router.put("/:id", async (req, res) => {
 
     // kalau nama/kode_buku kosong atau gaada kolom nama/kode_buku di request body
     if (!nama || !kode_buku) {
-      const msg = `${!nama ? "Nama" : "Kode Buku"} gabole kosong 😠`;
+      const msg = `${!nama ? "Nama" : "Kode Buku"} DILARANG KOSONG!!`;
       const error = new Error(msg);
       error.statusCode = 401;
       throw error;
