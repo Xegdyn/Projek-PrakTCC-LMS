@@ -1,7 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const app = express();
-const port = process.env.PORT || 3100; // Use PORT environment variable
+const port = process.env.PORT || 8080; // Use PORT environment variable
 
 const bukuRouter = require("./buku");
 
